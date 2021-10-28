@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
+      <meta charset="UTF-8" >
+	  <link rel="shortcut icon" href="files/favicon.ico">
+      <link rel="stylesheet" href="stylenew.css">
+    <title>c++</title>    
+    </head>
+    <body>
+    <div class="containerg">
+            <header class="header_a">
+                <nav>
+                    <ul class="nav_ul" id="menu"> <a href="index.html"><img src="1.png" alt="Главная" width="50" ></a> 
+                    <li class="nav_li"><a class="nav_a" href="index.html" >Главная</a></li>
+                    <li class="nav_li"><a class="nav_a" href="Pfotosh.html">Галерея</a></li>
+                    <li class="nav_li"><a class="nav_a" href="new 1.html">Дневник</a></li>
+                    <li class="nav_li"><a class="nav_a" href="grid.html">More</a></li>
+                    </ul>   
+                    <div class="mobil-bar" onclick="toggleMobileMenu();">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        </div> 
+                        <a class="grid-itemh">Gregory3701@gmail.com</a>
+                </nav>
+            </header>
+            <main class="gmain"> 
+                <div class="gr">
+                    <div class="d1"><a class="nav_a" href="index.html">Назад</a></div>
+                    <div class="d2">
+    <pre class="cc">
+        #include <iostream>
+        using namespace std;
+        
+        int main() {
+            cout << "Hello, friend!" << endl;
+        }
+        
+        #include <algorithm>
+        #include <iostream>
+        #include <map>
+        #include <string>
+        #include <vector>
+        
+        using namespace std;
+        
+        // структура - составной тип, состоит из нескольких членов
+        struct Date {
+            int year;
+            int month;
+            int day;
+        };
+        
+        int main() {
+            // переменная имеет тип (словарь с ключами-строками и значениями типа Date)
+            // и имя (birth_dates)
+            map<string, Date> birth_dates;
+            string name; // строка - name
+            
+            // читаем число записей из потока cin (character input)
+            int count;
+            cin >> count;
+        
+            // читаем все записи, для этого прогоняем счетчик i от 0 до count - 1
+            for (int i = 0; i < count; ++i) {
+                int year, month, day; // целые числа - year, month, day
+                cin >> name >> year >> month >> day;
+                birth_dates[name] = {year, month, day};
+            }
+        
+            vector<string> born_in_may; // вектор, то есть массив, строк - born_in_may
+        
+            // цикл по словарю
+            for (const auto& [name, date] : birth_dates) {
+                if (date.month == 5) {
+                    born_in_may.push_back(name); // добавляем имя в конец
+                }
+            }
+        
+            // сортируем массив по алфавиту
+            sort(born_in_may.begin(), born_in_may.end());
+        
+            // цикл по вектору
+            for (const auto& name : born_in_may) {
+                cout << name << ' ';
+            }
+            cout << endl;
+        }
+        
+        
+        cout << 42 << endl
+          
+          int x = 42;
+           cout << x << e
+           int a; // в переменной будут лежать случайные значения
+           int b = 1; // идеальный вариант
+           int c1 = 2, c2 = -3; // длинные списки сложно читать, 
+           лучше объявлять по одной переменной в каждой строке
+           int x = 1 + 2;
+           int y = x + 3;
+            cout << x << endl // 3
+            << y << endl // 6
+            << x * 10 << endl // 30
+            << y / 4 << endl; // 1 (внимание!)
+
+
+            int x = 2;
+            int y = 3;
+            x = y + 5; // значение x теперь равно 8
+            x += 2; // значение x теперь равно 10
+            Последняя строка эквивалентна более длинной команде: x = x + 2.
+    </pre>
+                    </div>
+                    <div class="d3"><a class="nav_a" href="#">Далее</a></div>
+                </div>  
+            </main>
+            <aside class="aright">
+            <img c src="img/N7.jpg" width="800 px">
+            
+            </aside>
+            <footer class="page-footer">
+                <div class="containerf">
+                  Подвал
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
